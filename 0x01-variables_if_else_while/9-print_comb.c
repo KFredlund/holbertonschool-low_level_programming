@@ -2,7 +2,10 @@
 #include <stdlib.h>
 /**
 * main - Entry point
-*
+* x - stores the value of the number being parsed
+* n - holds the new line character
+* c - stores the comma
+* s - stores the space
 * Return: Always 0 (Success)
 */
 int main(void)
