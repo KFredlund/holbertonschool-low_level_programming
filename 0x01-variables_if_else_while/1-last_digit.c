@@ -3,7 +3,7 @@
 #include <stdio.h>
 /**
 * main - Entry point
-*
+* lastDigit - stores command to grab the last digit of n
 * Return: Always 0 (Success)
 */
 int main(void)
