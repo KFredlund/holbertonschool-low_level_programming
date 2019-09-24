@@ -6,24 +6,27 @@
 */
 void times_table(void)
 {
-	int num = 0;
-	int by0 = (num * 0);
-	int by1 = (num * 1);
+	int across;
+	int down;
 
-	for (num = 0; num <= 9; num++)
+	for (across = 0; across <= 9; across++)
 	{
-		_putchar(by0);
-		_putchar(',');
-		_putchar(' ');
-		_putchar(' ');
-	}
-	_putchar('\n');
-	for (num = 0; num <= 9; num++)
-	{
-		_putchar(by1);
-		_putchar(',');
-		_putchar(' ');
-		_putchar(' ');
+		_putchar('0');
+		for (across = 0; across <= 9; across++)
+		{
+			_putchar(across);
+			for (down = 1; down <= 9; down++)
+			{
+				_putchar('\n');
+				_putchar(down);
+				for (across = 0; across <= 9; across++)
+				{
+					_putchar(',');
+					_putchar(' ');
+					_putchar(down * across + '0');
+				}
+			}
+		}
 	}
 	_putchar('\n');
 }
