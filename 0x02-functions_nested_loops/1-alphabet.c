@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
-* print_aplhabet - function that prints alphabet from a-z
+* print_alphabet - function that prints alphabet from a-z
 *
 * Return: Always 0 (Success)
 */
