@@ -10,11 +10,8 @@ void puts_half(char *str)
 
 	while (str[index] != '\0')
 	{
-		if (str % 2 == 0)
-		{		
-			_putchar(str[index]);
-			index++;
-		}
+		_putchar(str[index]);
+		index++;
 	}
 	_putchar('\n');
 }
