@@ -10,9 +10,54 @@ char *cap_string(char *s)
 
 	for (; s[c] != '\0'; c++)
 	{
-		if (s[c]>= 'a' && s[c] <= 'z')
+		if (c == 0)
 		{
-			s[c] = s[c] - 32;
+			if (s[c] >= 'a' && s[c] <= 'z')
+			{
+				s[c] = s[c] - 32;
+				continue;
+			}
+		}
+		if (s[c] == ' ' || s[c] == ',' || s[c] == ';' || s[c] == '.')
+		{
+			c++;
+			if (s[c] >= 'a' && s[c] <= 'z')
+			{
+				s[c] = s[c] - 32;
+				continue;
+			}
+		}
+		else if (s[c] == '!' || s[c] == '?' || s[c] == '"')
+		{
+			c++;
+			if (s[c] >= 'a' && s[c] <= 'z')
+			{
+				s[c] = s[c] - 32;
+				continue;
+			}
+		}
+		else if (s[c] == '(' || s[c] == ')')
+		{
+			c++;
+			if (s[c] >= 'a' && s[c] <= 'z')
+			{
+				s[c] = s[c] - 32;
+				continue;
+				}
+		}
+		else if (s[c] == '{' || s[c] == '}')
+		{
+			c++;
+			if (s[c] >= 'a' && s[c] <= 'z')
+			{
+				s[c] = s[c] - 32;
+				continue;
+			}
+		}
+		else
+		{
+			if (s[c] >= 'A' && s[c] <= 'Z')
+				s[c] = s[c] + 32;
 		}
 	}
 	return (s);
