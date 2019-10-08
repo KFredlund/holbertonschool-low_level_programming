@@ -18,7 +18,7 @@ char *_strstr(char *haystack, char *needle)
 		{
 			/* Sync i and j count while preserving i count */
 			j = 0;
-			while (haystack[i + j] == needle[i])
+			while (haystack[i + j] == needle[j])
 			{
 				if (needle[j] == '\0')
 				{
