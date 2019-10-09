@@ -1,5 +1,5 @@
 #include "holberton.h"
-/*
+/**
 * help - A function that helps the sqrt function pass another
 * parameter @ result
 * @n: first int var
