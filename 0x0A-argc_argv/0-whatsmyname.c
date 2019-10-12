@@ -5,7 +5,6 @@
 * main - Entry point
 * @argc: parameter that counts the number of args
 * @argv: Array of pointers to strings
-* @i: looping variable
 * Return:0
 */
 int main(int argc, char *argv[])
