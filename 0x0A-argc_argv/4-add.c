@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 		sum += atoi(argv[a]);
 		for (b = 0; argv[a][b] != '\0'; b++)
 		{
-			if (!isdigit(argv[a][b]))
+			if (!(isdigit(argv[a][b])))
 			{
 				printf("ERROR\n");
 				return (0);
