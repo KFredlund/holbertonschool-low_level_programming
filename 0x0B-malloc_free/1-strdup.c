@@ -1,7 +1,7 @@
 #include "holberton.h"
 #include <stdlib.h>
 /**
-* _strdup - Function that returns a pointer to a new string which is a 
+* _strdup - Function that returns a pointer to a new string which is a
 * duplicate of string @str
 * @str: first char var
 *
@@ -9,20 +9,18 @@
 */
 char *_strdup(char *str)
 {
-	int i;
+	int i = 0, j;
 	char *dup;
-	dup = malloc(sizeof(*dup) * 10);
-	str  = malloc(sizeof(char) * 10);
-	
-	if (str != NULL)
-	{
-		for (i = 0; i < '\0'; i++)
-		{
-			str[i] = dup[i];
-		}
-		free(str);
-		return (dup);
-	}
-	else
+
+	if (str == NULL)
 		return (NULL);
+	for (; str[i] != '\0'; i++)
+		;
+	i++;
+	dup = malloc(i * sizeof(char));
+	if (dup == NULL)
+	return (NULL);
+	for (j = 0; j < i; j++)
+		dup[j] = str[j];
+	return (dup);
 }
