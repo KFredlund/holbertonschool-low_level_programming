@@ -3,7 +3,7 @@
 #include <stdio.h>
 /**
  * print_dog - Function that prints a stuct dog
- * @d - element of dog
+ * @d: element of dog
  *
  * Return: Always 0
  */
