@@ -26,6 +26,7 @@ void print_all(const char * const format, ...)
 				sval = va_arg(args, char *);
 				if (sval == NULL)
 					printf("(nil)");
+					break;
 				printf("%s", sval);
 				break;
 			default:
