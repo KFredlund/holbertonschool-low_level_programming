@@ -12,11 +12,12 @@ char *rot13(char *s)
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		for (j = 0; j <= 53; j++)
+		for (j = 0; j <= 51; j++)
 		{
 			if (s[i] == in[j])
 			{
 				s[i] = out[j];
+				break;
 			}
 		}
 	}
