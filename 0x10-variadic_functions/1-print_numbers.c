@@ -1,7 +1,5 @@
 #include "variadic_functions.h"
 #include <stdio.h>
-#include <unistd.h>
-int _putchar(char c);
 /**
 * print_numbers - A function that prints numbers
 * @separator: the string to be printed between nums
@@ -25,15 +23,4 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		}
 	}
 	va_end(args);
-}
-/**
- * _putchar - writes the character c to stdout
- * @c: The character to print
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- */
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
 }
