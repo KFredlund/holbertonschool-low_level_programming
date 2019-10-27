@@ -1,18 +1,14 @@
-global _start
+	global	_start
 
-section .text
+	section	.text
+_start:	mov	rax, 1		; write
+	mov	rdi, 1		; STDOUT_FILENO,
+	mov 	rsi, message	; Address of string to output
+	mov 	rdx, 17		; Number of bytes
+	syscall			; invoke os to do the write
+	mov 	rax, 60		; system call for exit
+	xor 	rdi, rdi	; exit code 0
+	syscall			; invoke os to exit
 
-_start:
-  mov rax, 1        ; write(
-  mov rdi, 1        ;   STDOUT_FILENO,
-  mov rsi, msg      ;   "Hello, Holberton\n",
-  mov rdx, msglen   ;   sizeof("Hello, Holberton\n")
-  syscall           ; );
-
-  mov rax, 60       ; exit(
-  mov rdi, 0        ;   EXIT_SUCCESS
-  syscall           ; );
-
-section .rodata
-  msg: db "Hello, Holberton", 10
-  msglen: equ $ - msg
+	section .data
+messag:	db 	"Hello, Holberton", 10
