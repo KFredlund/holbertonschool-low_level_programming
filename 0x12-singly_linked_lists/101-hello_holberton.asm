@@ -10,5 +10,5 @@ _start:	mov	rax, 1		; write
 	xor 	rdi, rdi	; exit code 0
 	syscall			; invoke os to exit
 
-	section .data
+	section .rodata
 messag:	db 	"Hello, Holberton", 10
