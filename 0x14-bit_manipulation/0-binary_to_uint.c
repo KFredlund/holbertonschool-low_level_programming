@@ -10,13 +10,13 @@
 */
 unsigned int binary_to_uint(const char *b)
 {
-	int total = 0;
+	unsigned int total = 0;
 
-	while (b)
+	for (; *b != '\0'; b++)
 	{
-		total *= 2;
-		if (*b++ == '1')
-			total += 1;
+		if (*b != '1' && *b != '0')
+			return (0);
+		total = (total * 2) + (*b - '0');
 	}
-	return (0);
+	return (total);
 }
