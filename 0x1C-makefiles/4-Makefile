@@ -1,0 +1,32 @@
+# -*- MakeFile -*-
+
+#target: dependencies
+#	action
+CC = gcc
+SRC = main.c holberton.c
+OBJ = main.o holberton.o
+NAME = holberton
+RM = -rm -f
+CFLAGS = -Wall -Werror -Wextra -pedantic
+all: $(NAME) $(OBJ) clean oclean fclean re
+.PHONY: all clean ocealn fclean re
+$(NAME): $(OBJ)
+	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+
+main.o: main.c
+	-$(CC) $(CFLAGS) -c main.c
+
+holberton.o: holberton.c
+	-$(CC) $(CFLAGS) -c holberton.c
+
+clean:
+	-$(RM) *~ $(NAME)
+
+oclean:
+	-$(RM) $(OBJ)
+
+fclean:
+	-$(RM) *~ $(NAME) $(OBJ)
+
+re:
+	-$(CC) $(CFLAGS) $(SRC)
