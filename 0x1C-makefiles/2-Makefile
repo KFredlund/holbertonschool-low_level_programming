@@ -1,0 +1,21 @@
+# -*- MakeFile -*-
+
+#target: dependencies
+#	action
+CC = gcc
+SRC = main.c holberton.c
+OBJ = main.o holberton.o
+NAME = holberton
+all: $(NAME) $(OBJ) clean
+.PHONY: all clean
+$(NAME): $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
+
+main.o: main.c
+	$(CC) -c main.c
+
+holberton.o: holberton.c
+	$(CC) -c holberton.c
+
+clean:
+	rm -f $(OBJ) $(NAME)
