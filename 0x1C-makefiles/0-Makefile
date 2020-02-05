@@ -2,7 +2,8 @@
 
 #target: dependencies
 #	action
-
+all: holberton main.o holberton.o
+.PHONY: all
 holberton: main.o holberton.o
 	gcc main.o holberton.o -o holberton
 
@@ -11,3 +12,5 @@ main.o: main.c
 
 holberton.o: holberton.c
 	gcc -c holberton.c
+
+clean: rm -f holberton main.o holberton.o
