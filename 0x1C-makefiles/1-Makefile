@@ -2,21 +2,22 @@
 
 #target: dependencies
 #	action
+TARGET = holberton
 SRC = main.c holberton.c
 
-CC = /usr/local/bin/gcc
+CC = gcc -std=c99 -c
 
 all: holberton main.o holberton.o clean
 .PHONY: all
 
-holberton: main.o holberton.o
+$(TARGET): main.o holberton.o
 	gcc main.o holberton.o -o holberton
 
 main.o: main.c
-	gcc -c main.c
+	$(CC) -c main.c
 
 holberton.o: holberton.c
-	gcc -c holberton.c
+	$(CC) -c holberton.c
 
 clean:
 	rm -f main.o holberton.o
