@@ -6,16 +6,17 @@ SRC = main.c holberton.c
 
 CC = /usr/local/bin/gcc
 
-all: holberton main.o holberton.o
+all: holberton main.o holberton.o clean
 .PHONY: all
 
 holberton: main.o holberton.o
-	main.o holberton.o -o holberton
+	gcc main.o holberton.o -o holberton
 
 main.o: main.c
 	gcc -c main.c
 
 holberton.o: holberton.c
-	gcc  -c holberton.c
+	gcc -c holberton.c
 
-clean: rm -f holberton main.o holberton.o
+clean:
+	rm -f main.o holberton.o
